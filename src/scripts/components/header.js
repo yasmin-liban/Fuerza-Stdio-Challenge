@@ -1,6 +1,7 @@
 export default class Header {
   constructor() {
     this.selector = '[data-component="header"]';
+    this.multiple = false;
 
     const $header = document.querySelector(this.selector);
 
