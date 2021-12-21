@@ -1,0 +1,35 @@
+/**
+ *
+ * Sub Menu Main
+ *
+ */
+.submenu-main {
+  background-color: $white;
+  position: absolute;
+  
+  &--nested {
+    bottom: calc(-#{$header-height-desktop} - 20px);
+  }
+
+  &--sub-nested {
+    left: 100%;
+    top: 0;
+  }
+
+  &--visible {
+    display: block;
+  }
+
+  .submenu-item {
+    border-bottom: solid 1px #ebebeb;
+    padding: px-to-rem(5px) px-to-rem(10px);
+    
+    &--selected {
+      background-color: #ebebeb;
+    }
+    
+    &--position-relative {
+      position: relative;
+    }
+  }
+}

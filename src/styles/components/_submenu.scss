@@ -1,0 +1,28 @@
+/**
+ *
+ * Sub-Menu
+ *
+ */
+.submenu {
+  display: none;
+  
+  &,
+  ul {
+    @include list-unstyled;
+  }
+
+  a {
+    color: inherit;
+    display: inline-block;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
