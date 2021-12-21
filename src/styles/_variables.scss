@@ -15,9 +15,13 @@ $variable-prefix: '';
  *
  */
 $colors: (
-  'blue': #07a
+  'light-blue': #00ffb1,
+  'dark-blue': #0062ff
 );
 $theme-colors: ();
+$primary-gradient-to-right: linear-gradient(90deg, color('light-blue'), color('dark-blue'));
+$primary-gradient-to-bottom: linear-gradient(color('dark-blue'), color('light-blue'),);
+
 
 // Text colors.
 $body-color: #222;
@@ -56,6 +60,7 @@ $h6-font-size: map-get($font-sizes, xs);
  */
 $trs: 0.3s;
 $trs-slow: 0.5s;
+$trs-fn-bounce: cubic-bezier(0.26, 0.96, 0.48, 1.19);
 
 /**
  *
