@@ -4,23 +4,51 @@
  *
  */
 .header {
-  background-color: #444;
+  background-color: #fff;
+  box-shadow: 1px 4px 16px -2px rgba(0, 0, 0, 0.48);
   left: 0;
   position: fixed;
   right: 0;
   top: 0;
   z-index: 20;
 
+  @include tablet-up {
+    padding: 0 10%;
+  }
+
+  @include desktop-md-up {
+    padding: 0 17%;
+  }
+
   &__body {
     align-items: center;
     display: flex;
     height: $header-height-desktop;
+    @include tablet-down {
+      justify-content: space-between;
+      margin-left: px-to-rem(31px);
+      margin-right: px-to-rem(31px);
+    }
+  }
+
+  &__menu {
+    height: 100%;
+    width: 100%;
+    @include tablet-down {
+      display: none;
+      transition: right $trs-slow $trs-fn-bounce;
+    }
   }
 
   &__logo {
-    margin-right: px-to-rem(150px);
-    max-width: px-to-rem(300px);
+    max-width: px-to-rem(280px);
+    min-width: px-to-rem(142px);
+    transition: transform $trs-slow $trs-fn-bounce;
     width: 100%;
+    @include desktop-md-up {
+      margin-left: px-to-rem(47.5px);
+      margin-top: px-to-rem(5px);
+    }
 
     a {
       display: inline-block;
