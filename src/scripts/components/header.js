@@ -9,6 +9,7 @@ export default class Header {
       toggleMenuActive: 'is-active',
       menuActive: 'header-menu-active',
       rootMobileClass: 'mobile-menu-visible',
+      slideMenuActive: 'header__menu--slide',
     };
 
     this.nodes = {
@@ -34,5 +35,6 @@ export default class Header {
     this.nodes.root.classList.toggle(this.classes.rootMobileClass);
     this.nodes.menu.classList.toggle(this.classes.menuActive);
     this.nodes.toggleMenu.classList.toggle(this.classes.toggleMenuActive);
+    this.nodes.menu.classList.toggle(this.classes.slideMenuActive);
   }
 }
