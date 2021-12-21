@@ -3,14 +3,14 @@
 import '@styles';
 import './images';
 import App from './app';
-import Example from './components/example';
 import Header from './components/header';
+import SubMenu from './components/submenu';
 
 // Your code goes here ...
 document.addEventListener('DOMContentLoaded', () => {
   const app = new App([
-    new Example(),
     new Header(),
+    new SubMenu(),
   ]);
 
   app.bootstrap();
