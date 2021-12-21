@@ -9,43 +9,63 @@
 <body>
   <!-- start-header -->
   <header class="header" data-component="header">
-    <div class="container">
-      <div class="header__body">
-        <div class="header__logo">
-          <a href="#" class="logo">
-            <!-- Logo goes here -->
-          </a>
-        </div>
-        <div class="header__menu" data-element="menu">
-          <ul class="menu menu-main">
-            <li class="menu-item">
-              <a href="#">A Empresa</a>
-            </li>
-            <li class="menu-item">
-              <a href="#">Serviços</a>
-            </li>
-            <li class="menu-item">
-              <a href="#">Equipe</a>
-            </li>
-            <li class="menu-item">
-              <a href="#">Galeria</a>
-            </li>
-            <li class="menu-item">
-              <a href="#">Fale Conosco</a>
-            </li>
-          </ul>
-        </div>
-
-        <button
-          class="btn-nav"
-          data-element="toggle-menu"
-          aria-controls="navbar"
-          aria-expanded="true"
-          aria-label="Toggle navigation"
-        >
-          <span></span>
-        </button>
+    <div class="header__body">
+      <div class="header__logo">
+        <a href="#" class="logo" data-element="logo">
+          <img src="./images/logo-full-black.svg" />
+        </a>
       </div>
+      <div class="header__menu" data-element="menu">
+        <ul class="menu menu-main">
+          <li class="menu-item">
+            <a href="#">A Empresa</a>
+          </li>
+          <li class="menu-item">
+              <a href="#" handler-for="submenu-servicos">Serviços</a>
+              <ul class="submenu submenu-main" data-element="submenu" nest-level="1" id="submenu-servicos">
+                <li class="submenu-item">
+                  <a href="#"> Nossos Serviços 01</a>
+                </li>
+                <li class="submenu-item">
+                    <a href="#" handler-for="submenu-servicos-02"> Nossos Serviços 02</a>
+                    <ul class="submenu submenu-main" data-element="submenu" nest-level="2" id="submenu-servicos-02">
+                      <li class="submenu-item">
+                        <a href="#"> Sub Nossos Serviços 01</a>
+                      </li>
+                      <li class="submenu-item">
+                        <a href="#"> Sub Nossos Serviços 02</a>
+                      </li>
+                      <li class="submenu-item">
+                        <a href="#"> Sub Nossos Serviços 03</a>
+                      </li>
+                    </ul>
+                </li>
+                <li class="submenu-item">
+                  <a href="#"> Nossos Serviços 03</a>
+                </li>
+              </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#">Equipe</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Galeria</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Fale Conosco</a>
+          </li>
+        </ul>
+      </div>
+
+      <button
+        class="btn-nav"
+        data-element="toggle-menu"
+        aria-controls="navbar"
+        aria-expanded="true"
+        aria-label="Toggle navigation"
+      >
+        <span></span>
+      </button>
     </div>
   </header>
   <!-- /end-header -->
