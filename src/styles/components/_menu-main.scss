@@ -4,17 +4,33 @@
  *
  */
 .menu-main {
+  background-color: $white;
+  color: #9d9897;
   display: flex;
-  flex-wrap: wrap;
+  font-family: 'Futura Md BT';
+  height: 100%;
+  justify-content: space-between;
   position: relative;
-
-  > li + li {
-    margin-left: px-to-rem(32px);
-  }
+  transition: all $trs-slow ease-out;
 
   a {
     color: color('white');
     line-height: (18/16);
     text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .menu-item {
+    @include padding-x(px-to-rem(26px));
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+    @include tablet-up {
+      &:hover {
+        box-shadow: 0 -5px 0 -1px #00e2bf inset;
+        box-sizing: border-box;
+      }
+    }
   }
 }
