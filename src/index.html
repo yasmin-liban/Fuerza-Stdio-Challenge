@@ -71,13 +71,19 @@
   <!-- /end-header -->
 
   <!-- start-hero -->
-  <section class="hero">
-    <!--
-      - You should put your markup here.
-      - Don't forget to follow the BEMCSS conventional classes.
-      - The background should be fixed (will not change when pass over slides).
-      - We use the Swiper (https://swiperjs.com) as our default library.
-     -->
+  <section class="hero" data-element="hero">
+    <div class="hero__swiper main-swiper">
+
+      <div class="parallax-bg" data-swiper-parallax="0"></div>
+
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+      </div>
+    
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
   </section>
   <!-- /end-hero -->
 
