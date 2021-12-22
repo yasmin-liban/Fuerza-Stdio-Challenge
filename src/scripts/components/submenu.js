@@ -16,13 +16,11 @@ export default class SubMenu {
   }
 
   bootstrap($submenu) {
-    this.$submenu = $submenu;
+    const $handler = document.querySelector(`[handler-for="${$submenu.id}"]`);
 
-    this.$handler = document.querySelector(`[handler-for="${$submenu.id}"]`);
+    $handler.addEventListener('click', this.onToggleSubMenu.bind(this));
 
-    this.$handler.addEventListener('click', this.onToggleSubMenu.bind(this));
-
-    this.handleNestingVisualization(this.$submenu, this.$handler);
+    this.handleNestingVisualization($submenu, $handler);
   }
 
   handleNestingVisualization($submenu, $handler) {
@@ -32,23 +30,16 @@ export default class SubMenu {
     } else if (nestLevel === '1') {
       $submenu.classList.add(this.classes.showBelow);
     } else {
-      $submenu.classList.add(this.classes.showToSide);
       const handlerParent = $handler.closest('.submenu-item');
+      $submenu.classList.add(this.classes.showToSide);
       handlerParent.classList.add(this.classes.positionRelative);
     }
   }
 
   onToggleSubMenu(event) {
-    let $target = event.target;
-    if ($target.firstElementChild && $target.firstElementChild.matches(this.handlerSelector)) {
-      $target = $target.firstElementChild;
-    }
-
-    if ($target.matches(this.handlerSelector)) {
-      const handlerFor = $target.getAttribute('handler-for').replace('#', '');
-      const $submenu = document.querySelector(`[id=${handlerFor}]`);
-      $submenu.classList.toggle(this.classes.menuVisible);
-    }
+    const handlerFor = event.target.getAttribute('handler-for');
+    const $submenu = document.querySelector(`[id=${handlerFor}]`);
+    $submenu.classList.toggle(this.classes.menuVisible);
   }
 
   onClickOutsideMenu(event) {
