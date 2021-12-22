@@ -15,19 +15,19 @@
 }
 
 @mixin arrow-rotate-up() {
-  transform: rotate(-135deg);
+  transform: rotate(-270deg);
 }
 
 @mixin arrow-rotate-down() {
-  transform: rotate(45deg);
+  transform: rotate(270deg);
 }
 
 @mixin arrow-rotate-left() {
-  transform: rotate(135deg);
+  transform: rotate(0deg);
 }
 
 @mixin arrow-rotate-right() {
-  transform: rotate(-45deg);
+  transform: rotate(-180deg);
 }
 
 @mixin arrow-outline-up(
