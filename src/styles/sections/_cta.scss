@@ -20,11 +20,30 @@
   &__title {
     @extend %title-h2;
     font-family: $font-family-gotham;
+    width: fit-content;
   }
   
   &__content {
     font-family: $font-family-futura;
     font-size: 20px;
     max-width: 81%;
+    width: fit-content;
+  }
+
+  &__buttons {
+    width: 24%;
+
+    @keyframes elongate {
+      0% { width: 29px;}
+      100% { width: 40px; }
+    }
+
+    img {
+      height: auto;
+    }
+
+    button:hover img {
+      animation: elongate 0.3s forwards;
+    }
   }
 }
