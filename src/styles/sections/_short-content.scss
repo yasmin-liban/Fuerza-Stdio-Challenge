@@ -1,0 +1,43 @@
+/**
+ *
+ * Short Content
+ *
+ */
+.short-content {
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: px-to-rem(45px);
+    max-width: none;
+    width: 100%;
+  }
+
+  .card-short-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 332px;
+    
+    &__title {
+      font-family: $font-family-gotham;
+      font-weight: 800;
+    }
+
+    &__inner {
+      margin-top: px-to-rem(15px);
+      text-align: center;
+    }
+
+    .the-content {
+      font-family: $font-family-futura;
+    }
+  }
+
+  .card-short-content__figure {
+    img {
+      @include width-height(100px);
+    }
+  }
+
+}
+
