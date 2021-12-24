@@ -8,12 +8,23 @@
   @include btn;
 
   &-primary {
-    @include button-size(px-to-rem(10px), px-to-rem(28px), $font-size-base, px-to-rem(100px));
-    background: #07a;
+    @extend %title-h3;
+    background: $primary-gradient-to-right;
+    border: unset;
     color: color('white');
+    font-family: $font-family-futura;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+    @include tablet-up {
+      @include button-size(px-to-rem(17px), px-to-rem(28px), $h3-font-size, px-to-rem(100px));
+    }
+
+    @include tablet-down {
+      @include button-size(px-to-rem(10px), px-to-rem(20px), px-to-rem(16px), px-to-rem(100px));
+    }
   }
 }
-
 /**
  *
  * Button Burger
