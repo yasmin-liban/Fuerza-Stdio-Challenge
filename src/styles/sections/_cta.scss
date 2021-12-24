@@ -1,0 +1,30 @@
+.cta {
+  background-image: $primary-gradient-to-right;
+  height: $cta-height-desktop;
+  margin-top: 30px;
+
+  &__inner {
+    @include full-size-container;
+    @include flex-center;
+    @include padding-x(20%);
+  }
+
+  &__info {
+    @include full-size-container;
+    color: color('white');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    @extend %title-h2;
+    font-family: $font-family-gotham;
+  }
+  
+  &__content {
+    font-family: $font-family-futura;
+    font-size: 20px;
+    max-width: 81%;
+  }
+}
