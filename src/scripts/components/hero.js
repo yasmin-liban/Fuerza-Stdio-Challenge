@@ -25,7 +25,7 @@ export default class Hero {
     this.swiper = new Swiper(this.nodes.swiper, {
       modules: [Navigation, Parallax],
       parallax: true,
-      autoHeight: true,
+      // autoHeight: true,
       cssMode: true,
       navigation: {
         prevEl: this.nodes.swiperButtonPrev,
