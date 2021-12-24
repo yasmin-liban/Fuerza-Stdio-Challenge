@@ -32,5 +32,23 @@ export default class Hero {
         nextEl: this.nodes.swiperButtonNext,
       },
     });
+
+    this.addEventListeners();
+    this.styleSwiperNavButtons();
+  }
+
+  addEventListeners() {
+    this.nodes.swiperButtonNext.addEventListener('click', this.swipeNext.bind(this));
+    this.nodes.swiperButtonPrev.addEventListener('click', this.swipePrev.bind(this));
+  }
+
+  swipeNext() {
+    this.swiper.slideNext();
+  }
+
+  swipePrev() {
+    this.swiper.slidePrev();
+  }
+
   }
 }
