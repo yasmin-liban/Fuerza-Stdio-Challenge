@@ -40,6 +40,10 @@ export default class SubMenu {
     const handlerFor = event.target.getAttribute('handler-for');
     const $submenu = document.querySelector(`[id=${handlerFor}]`);
     $submenu.classList.toggle(this.classes.menuVisible);
+
+    const $handlerParent = event.target.closest('.submenu-item');
+
+    $handlerParent.classList.toggle(this.classes.selected);
   }
 
   onClickOutsideMenu(event) {
@@ -48,6 +52,9 @@ export default class SubMenu {
     if (!(isSubmenu || isHandler)) {
       document.querySelectorAll(this.selector).forEach((submenu) => {
         submenu.classList.remove(this.classes.menuVisible);
+      });
+      document.querySelectorAll('.submenu-item').forEach((handlerParent) => {
+        handlerParent.classList.remove(this.classes.selected);
       });
     }
   }
