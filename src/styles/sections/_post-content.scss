@@ -5,6 +5,10 @@
  */
 .blog {
   margin-top: px-to-rem(100px);
+  
+  @include tablet-down {
+    margin-top: px-to-rem(75px);
+  }
 
   .container {
     display: flex;
@@ -12,6 +16,11 @@
     margin-top: 2.8125rem;
     max-width: none;
     width: 100%;
+
+    @include tablet-down {
+      align-items: center;
+      flex-direction: column;
+    }
   }
 
   .card-post {
@@ -19,11 +28,29 @@
     display: flex;
     flex-direction: column;
     max-width: 332px;
+    
+    @include tablet-up {
+      @include margin-x(10px);
+    }
+
+    @include tablet-down {
+      margin-bottom: px-to-rem(39px);
+    }
+
+    &:last-child {
+      @include tablet-down {
+        margin-bottom: 0;
+      }
+    }
 
     &__meta {
       display: flex;
       justify-content: space-between;
       margin-bottom: px-to-rem(10px);
+
+      @include tablet-down {
+        margin-bottom: px-to-rem(30px);
+      }
 
       .card-post-tag {
         @include button-size(px-to-rem(2px), px-to-rem(15px), $h5-font-size, px-to-rem(100px));
@@ -57,7 +84,9 @@
 
   .card-post__figure {
     img {
+      height: auto;
       transition: filter $trs-slow ease-in;
+      width: clamp(310px, 27vw, 330px);
     }
     
     img:hover {

@@ -10,6 +10,11 @@
     margin-top: px-to-rem(45px);
     max-width: none;
     width: 100%;
+
+    @include tablet-down {
+      align-items: center;
+      flex-direction: column;
+    }
   }
 
   .card-short-content {
@@ -18,14 +23,31 @@
     flex-direction: column;
     max-width: 332px;
     
+    @include tablet-up {
+      @include margin-x(10px);
+    }
+
+    @include tablet-down {
+      margin-bottom: px-to-rem(50px);
+      width: 100%;
+    }
+
+    &:last-child {
+      @include tablet-down {
+        margin-bottom: 0;
+      }
+    }
+
     &__title {
       font-family: $font-family-gotham;
       font-weight: 800;
     }
 
     &__inner {
-      margin-top: px-to-rem(15px);
       text-align: center;
+      @include tablet-up {
+        margin-top: px-to-rem(15px);
+      }
     }
 
     .the-content {
