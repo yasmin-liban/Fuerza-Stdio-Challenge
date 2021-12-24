@@ -1,4 +1,8 @@
 
 .main-content {
-  @include margin-x(clamp(20px, 14vw, 268px));
+  @include margin-x(clamp(20px, 16vw, 268px));
+
+  @include tablet-down {
+    @include margin-x(20px);
+  }
 }
