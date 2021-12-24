@@ -3,10 +3,22 @@
   height: $cta-height-desktop;
   margin-top: 30px;
 
+  @include tablet-down {
+    height: $cta-height-mobile;
+  }
+
   &__inner {
     @include full-size-container;
     @include flex-center;
     @include padding-x(20%);
+
+    @include desktop-md-down {
+      @include padding-x(10%);
+    }
+
+    @include tablet-down {
+      flex-direction: column;
+    }
   }
 
   &__info {
@@ -15,12 +27,22 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include tablet-down {
+      align-items: center;
+      height: auto;
+    }
   }
 
   &__title {
-    @extend %title-h2;
     font-family: $font-family-gotham;
+    font-size: px-to-rem(35px);
     width: fit-content;
+
+    @include tablet-down {
+      line-height: px-to-rem(63px);
+      text-align: center;
+    }
   }
   
   &__content {
@@ -28,10 +50,28 @@
     font-size: 20px;
     max-width: 81%;
     width: fit-content;
+
+    @include tablet-down {
+      display: inline-block;
+      line-height: px-to-rem(35px);
+      max-height: 9em;
+      overflow: hidden;
+      text-align: center;
+      word-wrap: break-word;
+    }
   }
 
   &__buttons {
     width: 24%;
+
+    @include desktop-md-down {
+      width: 44%;
+    }
+
+    @include tablet-down {
+      text-align: center;
+      width: 100%;
+    }
 
     @keyframes elongate {
       0% { width: 29px;}
