@@ -3,19 +3,20 @@
 // Tip!: You can create the responsive font-size for different title sizes too. :)
 
 %title-h1 {
-  font-size: $h1-font-size;
+  font-size: clamp($h1-font-size, 3vw, $h1-font-size*2-10);
 }
 
 %title-h2 {
-  font-size: $h2-font-size;
+  font-size: clamp($h2-font-size, 2vw, $h2-font-size*2-5);
 }
 
 %title-h3 {
-  font-size: $h3-font-size;
+  font-size: clamp($h3-font-size, 1.3vw, $h3-font-size*2-5);
 }
 
 %title-h4 {
-  font-size: $h4-font-size;
+  font-size: clamp($h4-font-size, 1.3vw, $h4-font-size*2-5);
+  line-height: clamp($h4-font-size, 1.3vw, $h4-font-size*2-5);
 }
 
 %title-h5 {
