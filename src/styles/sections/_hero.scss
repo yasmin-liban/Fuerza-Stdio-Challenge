@@ -1,0 +1,87 @@
+/**
+ *
+ * Hero Swiper
+ *
+ */
+.main-swiper {
+  @include padding-x(15%);
+  align-items: center;
+  display: flex;
+  height: $hero-height-desktop;
+  position: relative;
+  width: 100%;
+
+  @include tablet-down {
+    @include padding-x(2%);
+    height: $hero-height-mobile;
+  }
+
+  .parallax-bg {
+    @include background;
+    @include full-size-container;
+    background-image: linear-gradient(rgba(#676c72, 0.43), rgba(#676c72, 0.43)), url('~@images/hero-desktop-1x.png');
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    @include mobile-down {
+      background-image: url('~@images/hero-mobile-1x.png');
+      background-position: 0 100%;
+      background-size: 100vw;
+    }
+  }
+
+  .swiper-slide {
+    color: color('white');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100% !important;
+    
+    @include tablet-up {
+      @include padding-x(18%);
+    }
+
+    h1 {
+      @extend %title-h1;
+      font-family: $font-family-gotham;
+      font-weight: 800;
+    }
+
+    h4 {
+      @extend %title-h4;
+      @include padding-y(8%);
+      font-family: $font-family-futura;
+      word-break: break-word;
+      
+      @include tablet-up {
+        @include padding-y(5%);
+      }
+    }
+  }
+}
+
+/**
+ *
+ * Hero Swiper
+ * Swiper Navigation Buttons
+ *
+ */
+
+.swiper-button-prev,
+.swiper-button-next {
+  cursor: pointer;
+  position: relative;
+
+  @include tablet-down {
+    img {
+      width: 65%;
+    }
+  }
+}
+
+.swiper-button-next {
+  @include arrow-rotate-right;
+}
+
