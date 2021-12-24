@@ -6,6 +6,13 @@
 
 .btn {
   @include btn;
+  @include tablet-up {
+    @include button-size(px-to-rem(17px), px-to-rem(28px), $h3-font-size, px-to-rem(100px));
+  }
+
+  @include tablet-down {
+    @include button-size(px-to-rem(10px), px-to-rem(20px), px-to-rem(16px), px-to-rem(100px));
+  }
 
   &-primary {
     @extend %title-h3;
@@ -15,14 +22,16 @@
     font-family: $font-family-futura;
     letter-spacing: 2px;
     text-transform: uppercase;
-    
-    @include tablet-up {
-      @include button-size(px-to-rem(17px), px-to-rem(28px), $h3-font-size, px-to-rem(100px));
-    }
+  }
 
-    @include tablet-down {
-      @include button-size(px-to-rem(10px), px-to-rem(20px), px-to-rem(16px), px-to-rem(100px));
-    }
+  &-secondary {
+    background: none;
+    border: unset;
+    box-shadow: 0 0 0 3px color('white');
+    color: color('white');
+    font-family: $font-family-futura;
+    letter-spacing: 2px;
+    text-transform: uppercase;
   }
 }
 /**
