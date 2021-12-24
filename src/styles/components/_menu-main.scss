@@ -22,13 +22,13 @@
   .menu-item {
     @include padding-x(px-to-rem(26px));
     align-items: center;
+    border-bottom: solid 6px transparent;
     display: flex;
     justify-content: center;
     
     @include tablet-up {
       &:hover {
-        box-shadow: 0 -5px 0 -1px #00e2bf inset;
-        box-sizing: border-box;
+        border-bottom: solid 6px #00e2bf;
       }
     }
   }
