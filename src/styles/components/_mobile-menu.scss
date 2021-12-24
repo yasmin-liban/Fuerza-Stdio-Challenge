@@ -44,6 +44,7 @@
     padding-top: px-to-rem(48px);
 
     .menu-item {
+      display: block;
       padding: 0 0 px-to-rem(48px) 0;
       transition: all $trs-slow $trs-fn-bounce;
 
@@ -62,8 +63,6 @@
       transform: none;
       transition: all $trs-slow $trs-fn-bounce;
   
-      &--visible { 
-    &--visible { 
       &--visible { 
         animation: grow 0.5s $trs-fn-bounce forwards;
         transform-origin: top center;
