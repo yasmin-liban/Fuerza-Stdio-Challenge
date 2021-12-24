@@ -16,7 +16,9 @@ $variable-prefix: '';
  */
 $colors: (
   'light-blue': #00ffb1,
-  'dark-blue': #0062ff
+  'dark-blue': #0062ff,
+  'white': '#fff',
+  'gray': #b1b1b1,
 );
 $theme-colors: ();
 $primary-gradient-to-right: linear-gradient(90deg, color('light-blue'), color('dark-blue'));
