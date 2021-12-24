@@ -1,0 +1,30 @@
+/**
+ *
+ * Footer
+ *
+ */
+.footer {
+  background-color: color('dark-gray');
+  height: $footer-height-desktop;
+
+  @include tablet-down {
+    height: $footer-height-mobile;
+  }
+
+  &__inner {
+    @include full-size-container;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__info {
+    @include flex-center;
+    color: color('white');
+    font-family: $font-family-futura;
+    font-size: px-to-em(12px);
+  }
+
+  &__logo {
+    @include flex-center;
+  }
+}
