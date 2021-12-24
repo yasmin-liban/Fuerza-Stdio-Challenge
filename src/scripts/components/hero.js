@@ -50,5 +50,12 @@ export default class Hero {
     this.swiper.slidePrev();
   }
 
+  styleSwiperNavButtons() {
+    const arrows = [this.nodes.swiperButtonNext, this.nodes.swiperButtonPrev];
+    arrows.forEach((arrow) => {
+      const img = document.createElement('img');
+      img.src = './images/Icon ionic-ios-arrow.svg';
+      arrow.append(img);
+    });
   }
 }
