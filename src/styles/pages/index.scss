@@ -1,4 +1,4 @@
 
 .main-content {
-  @include margin-x(272px);
+  @include margin-x(clamp(20px, 14vw, 268px));
 }
