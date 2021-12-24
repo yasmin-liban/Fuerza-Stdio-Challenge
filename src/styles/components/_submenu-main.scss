@@ -8,7 +8,7 @@
   position: absolute;
   
   &--nested {
-    bottom: calc(-#{$header-height-desktop} - 20px);
+    bottom: calc(-#{$header-height-desktop} - 6px);
   }
 
   &--sub-nested {
